@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,200&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,74 +13,83 @@
 @LightGray: #f8f4e3;
 @VeryDarkGray: #121417;
 
+//Mixins
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // Layout
 body {
   main {
-    .header-banner {
+    position: relative;
+
+    header {
+      .center();
       width: 100%;
-      height: fit-content;
-      position: relative;
+      height: 128px;
+      position: sticky;
+      top: 0;
+      background-color: @LightGray;
+      z-index: 1000;
+      border-bottom: 1px solid #b4b4b4;
 
-      header {
-        background-color: @LightGray;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 128px;
+      nav {
+        width: 70%;
+        height: 60%;
+        max-height: 70px;
 
-        nav {
-          width: 70%;
-          height: 60%;
-          max-height: 70px;
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 100%;
+          height: 100%;
 
-          ul {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
-            height: 100%;
+          li {
+            list-style: none;
 
-            li {
-              list-style: none;
+            a {
+              text-decoration: none;
+              font-size: 18px;
+            }
 
-              a {
-                text-decoration: none;
-                font-size: 18px;
+            button {
+              background-color: @Green;
+              border: none;
+              height: 35px;
+              width: 140px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: @DarkGreen;
               }
 
-              button {
-                background-color: @Green;
-                border: none;
-                height: 35px;
-                width: 140px;
-                cursor: pointer;
-
-                &:hover {
-                  background-color: @DarkGreen;
-                }
-
-                a {
-                  color: #fff;
-                  font-size: 18px;
-                }
+              a {
+                color: #fff;
+                font-size: 18px;
               }
             }
           }
         }
       }
+    }
 
-      .banner {
+    .banner {
+      width: 100%;
+      height: fit-content;
+      position: relative;
+      text-align: center;
+
+      .banner-logo {
         width: 100%;
         height: 1140px;
+        background-image: url("img/BANNER_PRINCIPAL_DESKTOP .png");
+        background-size: cover;
 
-        .top-banner {
-          height: 40%;
-          background-color: @DarkGreen;
-        }
-        .down-banner {
-          height: 60%;
-          background-color: @Browm;
+        img {
+          width: 900px;
         }
       }
 
