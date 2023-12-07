@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,200&family=Shanti&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Shanti";
 }
 //Colors
 @Green: #5b913b;
@@ -21,6 +22,11 @@
 }
 
 // Layout
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   main {
     position: relative;
@@ -52,7 +58,9 @@ body {
 
             a {
               text-decoration: none;
+              color: @VeryDarkGray;
               font-size: 18px;
+              font-weight: bold;
             }
 
             button {
@@ -61,6 +69,7 @@ body {
               height: 35px;
               width: 140px;
               cursor: pointer;
+              font-family: "Shanti";
 
               &:hover {
                 background-color: @DarkGreen;
@@ -69,6 +78,7 @@ body {
               a {
                 color: #fff;
                 font-size: 18px;
+                font-weight: normal;
               }
             }
           }
