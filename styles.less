@@ -37,9 +37,8 @@ body {
       height: 128px;
       position: sticky;
       top: 0;
-      background-color: @LightGray;
+      background-color: @SaturedGreen;
       z-index: 1000;
-      border-bottom: 1px solid #b4b4b4;
 
       nav {
         width: 70%;
@@ -58,25 +57,21 @@ body {
 
             a {
               text-decoration: none;
-              color: @VeryDarkGray;
+              color: @LightGray;
               font-size: 18px;
-              font-weight: bold;
+              // font-weight: bold;
             }
 
             button {
-              background-color: @Green;
+              background-color: @LightGray;
               border: none;
               height: 35px;
               width: 140px;
               cursor: pointer;
-              font-family: "Shanti";
-
-              &:hover {
-                background-color: @DarkGreen;
-              }
 
               a {
-                color: #fff;
+                font-family: "Shanti";
+                color: @VeryDarkGray;
                 font-size: 18px;
                 font-weight: normal;
               }
@@ -89,17 +84,73 @@ body {
     .banner {
       width: 100%;
       height: fit-content;
-      position: relative;
-      text-align: center;
 
       .banner-logo {
         width: 100%;
-        height: 1140px;
-        background-image: url("img/BANNER_PRINCIPAL_DESKTOP .png");
-        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
 
-        img {
-          width: 900px;
+        .logo-presentation {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 32px;
+
+          .logo-img {
+            width: 100%;
+            margin: 0 0 32px 0;
+            display: flex;
+            justify-content: start;
+          }
+
+          .text-presentation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+              margin: 0 0 16px 0;
+              font-size: 28px;
+              text-align: justify;
+              width: 100%;
+            }
+
+            p {
+              width: 100%;
+              text-align: justify;
+              font-size: 20px;
+            }
+
+            button {
+              width: 100%;
+              height: 50px;
+              margin: 32px 0 0 0;
+              border: none;
+              background-color: @Green;
+              color: @LightGray;
+              font-size: 22px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: @DarkGreen;
+              }
+            }
+          }
+        }
+
+        .banner-img {
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 100%;
+            max-width: 900px;
+          }
         }
       }
 
@@ -110,8 +161,6 @@ body {
         height: fit-content;
         padding: 0 10%;
         max-height: 400px;
-        position: absolute;
-        bottom: -5%;
 
         .cards {
           width: 33%;
@@ -129,28 +178,28 @@ body {
     .about-us {
       width: 100%;
       height: 1391px;
-      background-color: @LightGray;
+      background-color: @DarkGreen;
     }
 
     .quote-call {
       width: 100%;
       height: 500px;
-      background-color: @DarkGreen;
+      background-color: red;
     }
 
     .services {
       width: 100%;
       height: 1057px;
-      background-color: @SaturedGreen;
+      background-color: @LightGray;
+    }
+
+    .quote-call-ii {
+      width: 100%;
+      height: 951px;
+      background-color: red;
     }
 
     .benefits {
-      width: 100%;
-      height: 951px;
-      background-color: @DarkGreen;
-    }
-
-    .why-us {
       width: 100%;
       height: 858px;
       background-color: @LightGray;
@@ -159,25 +208,25 @@ body {
     .faq {
       width: 100%;
       height: 719px;
-      background-color: @SaturedGreen;
+      background-color: @DarkGreen;
     }
 
     .contacts {
       width: 100%;
-      height: 1457px;
+      height: 1137px;
       background-color: @LightGray;
     }
 
     .portfolio {
       width: 100%;
-      height: 1152px;
+      height: 1472px;
       background-color: @SaturedGreen;
     }
 
     footer {
       width: 100%;
       height: 700px;
-      background-color: @DarkGreen;
+      background-color: red;
     }
   }
 }
