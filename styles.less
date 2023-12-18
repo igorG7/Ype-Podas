@@ -460,7 +460,81 @@ body {
     footer {
       width: 100%;
       height: 70vh;
-      background-color: red;
+
+      .content-footer {
+        .center();
+        width: 100%;
+        height: 90%;
+        background-image: url("img/BANNER_ORÇAMENTOS-2.png");
+        background-size: cover;
+
+        .about-us-footer {
+          width: 20%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          img {
+            width: 140px;
+            height: 90px;
+          }
+
+          article {
+            p {
+              color: @LightGray;
+            }
+          }
+        }
+
+        .services-footer {
+          .center();
+          width: 20%;
+          height: 100%;
+          margin: 0 32px;
+
+          ul {
+            width: 80%;
+
+            li {
+              margin: 16px 0;
+
+              list-style: none;
+              color: @LightGray;
+            }
+          }
+        }
+
+        .nav-footer {
+          .center();
+          width: 20%;
+          height: 100%;
+
+          ul {
+            width: 100%;
+
+            li {
+              color: @LightGray;
+              margin: 16px 0;
+
+              &:nth-child(1) {
+                list-style: none;
+              }
+
+              a {
+                text-decoration: none;
+                color: @LightGray;
+              }
+            }
+          }
+        }
+      }
+
+      .copy {
+        width: 100%;
+        height: 10%;
+        background-color: @Green;
+      }
     }
   }
 }
