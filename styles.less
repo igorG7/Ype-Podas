@@ -471,12 +471,18 @@ body {
         .faq-questions {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           width: 50%;
           height: 80%;
+          
 
           .question {
+
+            &:nth-child(2){
+              margin: 32px 0;
+            }
+
             .question-content {
               display: flex;
               justify-content: space-between;
@@ -489,6 +495,7 @@ body {
               p {
                 color: @LightGray;
                 font-size: 18px;
+                margin-right: 8px ;
               }
 
               .down {
@@ -507,8 +514,11 @@ body {
               height: 0;
               transition: height 0.3s;
               color: @LightGray;
-              font-size: 18px;
+              font-size: 16px;
               background-color: @SaturedGreen;
+              overflow: auto;
+              
+              
 
               p {
                 visibility: hidden;
@@ -517,8 +527,9 @@ body {
               }
 
               &.active {
-                height: 80px;
+                height: 100px;
                 transition: height 0.3s;
+                padding: 16px;
 
                 p {
                   visibility: visible;
