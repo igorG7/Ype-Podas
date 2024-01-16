@@ -475,11 +475,9 @@ body {
           align-items: center;
           width: 50%;
           height: 80%;
-          
 
           .question {
-
-            &:nth-child(2){
+            &:nth-child(2) {
               margin: 32px 0;
             }
 
@@ -495,7 +493,7 @@ body {
               p {
                 color: @LightGray;
                 font-size: 18px;
-                margin-right: 8px ;
+                margin-right: 8px;
               }
 
               .down {
@@ -517,8 +515,6 @@ body {
               font-size: 16px;
               background-color: @SaturedGreen;
               overflow: auto;
-              
-              
 
               p {
                 visibility: hidden;
@@ -544,9 +540,119 @@ body {
     }
 
     .contacts {
+      .center();
       width: 100%;
-      height: 1137px;
+      height: 100vh;
       background-color: @LightGray;
+
+      .contacts-content {
+        .center();
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+
+        h1 {
+          font-size: 50px;
+          margin: 32px 0;
+        }
+
+        .group-form-text {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          height: 65%;
+
+          .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 40%;
+            height: 100%;
+            padding: 32px;
+            text-align: center;
+            margin-right: 32px;
+            background-color: @SaturedGreen;
+
+            h2 {
+              color: @LightGray;
+              font-size: 30px;
+            }
+
+            form {
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              width: 80%;
+
+              input {
+                height: 35px;
+                margin: 8px 0;
+                padding: 8px;
+                border: none;
+              }
+
+              .street-num {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                input {
+                  &:nth-child(1) {
+                    width: 75%;
+                  }
+
+                  &:nth-child(2) {
+                    width: 20%;
+                  }
+                }
+              }
+
+              select {
+                height: 35px;
+                margin: 8px 0;
+                padding: 8px;
+                border: none;
+              }
+
+              .form-button {
+                margin: 16px auto 0;
+                width: 50%;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .text-contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            height: 100%;
+
+            article {
+              width: 90%;
+
+              h2 {
+                font-size: 30px;
+              }
+
+              p {
+                font-size: 20px;
+              }
+            }
+
+            .group-icons {
+              margin: 32px 0;
+
+              img {
+                margin: 0 4px;
+              }
+            }
+          }
+        }
+      }
     }
 
     .portifolio {
