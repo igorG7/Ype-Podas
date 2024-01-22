@@ -678,6 +678,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
+          padding: 16px 0;
 
           img {
             width: 140px;
@@ -687,6 +688,19 @@ body {
           article {
             p {
               color: @LightGray;
+              margin: 8px 0;
+            }
+          }
+
+          .contacts-icons {
+            display: flex;
+
+            a {
+              img {
+                margin: 0 4px;
+                width: 32px;
+                height: 32px;
+              }
             }
           }
         }
@@ -698,7 +712,7 @@ body {
           margin: 0 32px;
 
           ul {
-            width: 80%;
+            width: fit-content;
 
             li {
               margin: 16px 0;
@@ -714,20 +728,25 @@ body {
           width: 20%;
           height: 100%;
 
-          ul {
-            width: 100%;
+          nav {
+            width: fit-content;
 
-            li {
+            span {
               color: @LightGray;
-              margin: 16px 0;
+            }
 
-              &:nth-child(1) {
-                list-style: none;
-              }
+            ul {
+              width: fit-content;
+              margin: 0 18px;
 
-              a {
-                text-decoration: none;
+              li {
                 color: @LightGray;
+                margin: 16px 0;
+
+                a {
+                  text-decoration: none;
+                  color: @LightGray;
+                }
               }
             }
           }
