@@ -26,3 +26,25 @@ question.map((item) => {
     }
   });
 });
+
+let submit_button = document.querySelector("#submit-button") 
+
+const request_budget = () => {
+  
+  let name_client = document.querySelector("#name-client").value
+  let service_select = document.querySelector("#service-select").value
+  let number_phone = "5531983531055"
+  let checkbox_discard = document.querySelector("#discard")
+  let checkbox_value = checkbox_discard.checked
+  let message = encodeURIComponent(`Olá, meu nome é ${name_client}. Gostaria de solicitar um orçamento. \n*Serviço a ser realizado*: ${service_select} \n*Descarte dos resíduos*: ${checkbox_value === true? "Sim" : "Não"}`)
+
+  console.log(checkbox_value)
+
+  let url = `https://api.whatsapp.com/send?phone=${number_phone}&text=${message}`;
+
+  console.log(name_client, service_select)
+
+  window.open(url, "_blank")
+}
+
+submit_button.addEventListener("click", request_budget)

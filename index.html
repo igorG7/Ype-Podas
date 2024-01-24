@@ -317,31 +317,42 @@
             <div class="form">
               <h2>Faça um Orçamento!</h2>
 
-              <form action="">
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Nome e Sobrenome"
-                />
+              <form>
+                <div class="group-input">
+                  <input
+                    type="text"
+                    id="name-client"
+                    placeholder="Nome e Sobrenome"
+                  />
 
-                <select name="" id="">
-                  <option value="null" selected>Selecione um serviço</option>
-                  <option value="">Poda estética</option>
-                  <option value="">Poda de manutenção</option>
-                  <option value="">Remoção de galhos perigosos</option>
-                  <option value="">Supressão</option>
-                </select>
+                  <select id="service-select">
+                    <option value="null" selected>Selecione um serviço</option>
+                    <option value="Poda estética">Poda estética</option>
+                    <option value="Poda de manutenção">
+                      Poda de manutenção
+                    </option>
+                    <option value="Remoção de galhos perigosos">
+                      Remoção de galhos perigosos
+                    </option>
+                    <option value="Supressão">Supressão</option>
+                  </select>
 
-                <div class="street-num">
-                  <input type="text" name="" id="" placeholder="Rua" />
-                  <input type="number" name="" id="" placeholder="Nº" />
+                  <div class="check-discard">
+                    <input type="checkbox" name="discard" id="discard" />
+                    <label for="discard">Descarte dos resíduos?</label>
+
+                    <abbr
+                      title="Essa função tem como realizar a limpeza do local retirando os galhos, troncos e entre outros do ambiente. Mas este trabalho é solicitado a parte dos demais serviços. É necessário realizar a contratação da remoção de resíduos."
+                    >
+                      <img
+                        src="img/ponto-de-interrogacao.png"
+                        alt="Icone de interrogação"
+                      />
+                    </abbr>
+                  </div>
                 </div>
 
-                <input type="text" name="" id="" placeholder="Bairro" />
-                <input type="text" name="" id="" placeholder="Cidade" />
-
-                <input type="submit" value="Enviar" class="form-button" />
+                <button id="submit-button" class="form-button">Enviar</button>
               </form>
             </div>
 
