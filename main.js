@@ -48,3 +48,66 @@ const request_budget = () => {
 }
 
 submit_button.addEventListener("click", request_budget)
+
+const carouselContainer = document.querySelector(".carousel-container")
+const carouselControlsContainer = document.querySelector(".carousel-controls")
+const carouselControls = ['previous', 'next']
+const carouselItems = document.querySelectorAll(".carousel-item")
+
+class Carousel {
+  constructor(container, items, controls){
+    this.carouselContainer = container
+    this.carouselControls = controls
+    this.carouselArray = [...items]
+  }
+
+  updateCarousel(){
+    this.carouselArray.map((el) => {
+      el.classList.remove("carousel-item-1")
+      el.classList.remove("carousel-item-2")
+      el.classList.remove("carousel-item-3")
+      el.classList.remove("carousel-item-4")
+      el.classList.remove("carousel-item-5")
+    })
+
+    this.carouselArray.slice(0, 5).map((el, i) => {
+      el.classList.add(`carousel-item-${i+1}`)
+    })
+  }
+
+  setCurrentState(direction){
+    if(direction.className == "carousel-controls-previous"){
+      this.carouselArray.unshift(this.carouselArray.pop())
+    } else {
+      this.carouselArray.push(this.carouselArray.shift())
+    }
+
+    this.updateCarousel()
+  }
+
+  setControls() {
+    this.carouselControls.map((control) =>{
+      carouselControlsContainer.appendChild(document.createElement('button')).className=`carousel-controls-${control}`
+      document.querySelector(`.carousel-controls-${control}`).innerText = ""
+    })
+
+    document.querySelector(".carousel-controls-previous").innerHTML = "<img src='img/chevron-down.svg' class='left'/>"
+    document.querySelector(".carousel-controls-next").innerHTML = "<img src='img/chevron-down.svg' class='right'/>"
+   
+  }
+   
+  useControls(){
+    const triggers = [...carouselControlsContainer.childNodes]
+    triggers.map((control) => {
+      control.addEventListener('click', e => {
+        e.preventDefault()
+        this.setCurrentState(control)
+      })
+    })
+  }
+}
+
+const exampleCarousel = new Carousel(carouselContainer, carouselItems, carouselControls)
+
+exampleCarousel.setControls()
+exampleCarousel.useControls()
