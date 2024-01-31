@@ -14,10 +14,27 @@
 @LightGray: #f8f4e3;
 @VeryDarkGray: #121417;
 
+//Fonts
+@Paragraph_G: 20px;
+@Title: 50px;
+
 //Mixins
 .center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.center_column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -59,11 +76,10 @@ body {
               text-decoration: none;
               color: @LightGray;
               font-size: 18px;
-              // font-weight: bold;
             }
 
             button {
-              background-color: @LightGray;
+              background-color: @Green;
               border: none;
               height: 35px;
               width: 140px;
@@ -71,9 +87,13 @@ body {
 
               a {
                 font-family: "Shanti";
-                color: @VeryDarkGray;
+                color: @LightGray;
                 font-size: 18px;
                 font-weight: normal;
+              }
+
+              &:hover {
+                background-color: @DarkGreen;
               }
             }
           }
@@ -92,11 +112,8 @@ body {
         justify-content: center;
 
         .logo-presentation {
+          .center_column();
           width: 30%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
           padding: 0 32px;
 
           .logo-img {
@@ -121,7 +138,7 @@ body {
             p {
               width: 100%;
               text-align: justify;
-              font-size: 20px;
+              font-size: @Paragraph_G;
             }
 
             button {
@@ -130,9 +147,13 @@ body {
               margin: 32px 0 0 0;
               border: none;
               background-color: @Green;
-              color: @LightGray;
-              font-size: 22px;
               cursor: pointer;
+
+              a {
+                color: @LightGray;
+                font-size: 22px;
+                text-decoration: none;
+              }
 
               &:hover {
                 background-color: @DarkGreen;
@@ -142,10 +163,8 @@ body {
         }
 
         .banner-img {
+          .center();
           width: 40%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
 
           img {
             width: 100%;
@@ -156,10 +175,7 @@ body {
     }
 
     .services-locations {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      .center_column();
       width: 100%;
       height: 100vh;
 
@@ -207,7 +223,7 @@ body {
       p {
         width: 65%;
         text-align: center;
-        font-size: 20px;
+        font-size: @Paragraph_G;
       }
     }
 
@@ -226,14 +242,14 @@ body {
           width: 90%;
 
           h1 {
-            font-size: 50px;
+            font-size: @Title;
             color: @LightGray;
             margin-bottom: 32px;
           }
 
           p {
             color: @LightGray;
-            font-size: 20px;
+            font-size: @Paragraph_G;
           }
         }
       }
@@ -260,8 +276,7 @@ body {
       background-size: cover;
 
       .content-quote-call {
-        .center();
-        flex-direction: column;
+        .center_column();
         width: 40%;
         height: 100%;
 
@@ -270,7 +285,7 @@ body {
           margin: 0 0 32px 0;
 
           p {
-            font-size: 20px;
+            font-size: @Paragraph_G;
             color: @LightGray;
             margin: 16px 0;
           }
@@ -282,9 +297,14 @@ body {
           height: 50px;
           background-color: @Green;
           border: none;
-          font-size: 24px;
-          color: @LightGray;
+
           cursor: pointer;
+
+          a {
+            font-size: 24px;
+            color: @LightGray;
+            text-decoration: none;
+          }
 
           &:hover {
             background-color: @DarkGreen;
@@ -300,13 +320,12 @@ body {
       background-color: @LightGray;
 
       .content-services {
-        .center();
-        flex-direction: column;
+        .center_column();
         width: 70%;
         height: 100%;
 
         h1 {
-          font-size: 50px;
+          font-size: @Title;
           margin: 32px 0;
         }
 
@@ -355,8 +374,9 @@ body {
         article {
           text-align: center;
           margin: 32px 0;
+
           p {
-            font-size: 20px;
+            font-size: @Paragraph_G;
             margin: 8px 0;
           }
         }
@@ -376,13 +396,12 @@ body {
       background-color: @LightGray;
 
       .content-benefits {
-        .center();
-        flex-direction: column;
+        .center_column();
         width: 70%;
         height: 100%;
 
         h1 {
-          font-size: 50px;
+          font-size: @Title;
           margin: 32px 0;
         }
 
@@ -433,7 +452,7 @@ body {
           margin: 32px 0;
 
           p {
-            font-size: 20px;
+            font-size: @Paragraph_G;
           }
         }
       }
@@ -456,23 +475,20 @@ body {
           height: 100%;
 
           h1 {
-            font-size: 50px;
+            font-size: @Title;
             color: @LightGray;
           }
 
           p {
             width: 80%;
             margin: 16px 0;
-            font-size: 20px;
+            font-size: @Paragraph_G;
             color: @LightGray;
           }
         }
 
         .faq-questions {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          .center_column();
           width: 50%;
           height: 80%;
 
@@ -482,9 +498,7 @@ body {
             }
 
             .question-content {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              .between();
               height: 50px;
               padding: 16px;
               background-color: @SaturedGreen;
@@ -546,13 +560,12 @@ body {
       background-color: @LightGray;
 
       .contacts-content {
-        .center();
-        flex-direction: column;
+        .center_column();
         width: 70%;
         height: 100%;
 
         h1 {
-          font-size: 50px;
+          font-size: @Title;
           margin: 32px 0;
         }
 
@@ -621,7 +634,7 @@ body {
                   label {
                     margin: 0 8px;
                     color: @LightGray;
-                    font-size: 20px;
+                    font-size: @Paragraph_G;
                     cursor: pointer;
                   }
 
@@ -644,6 +657,10 @@ body {
                 font-size: 18px;
                 font-weight: bold;
                 cursor: pointer;
+
+                &:hover {
+                  background-color: #fff;
+                }
               }
             }
           }
@@ -663,7 +680,7 @@ body {
               }
 
               p {
-                font-size: 20px;
+                font-size: @Paragraph_G;
               }
             }
 
@@ -695,14 +712,14 @@ body {
         height: 100%;
 
         h1 {
-          font-size: 50px;
+          font-size: @Title;
           color: @LightGray;
         }
 
         article {
           width: 35%;
           text-align: center;
-          font-size: 21px;
+          font-size: @Paragraph_G;
           color: @LightGray;
         }
 
@@ -865,7 +882,6 @@ body {
 
             li {
               margin: 16px 0;
-
               list-style: none;
               color: @LightGray;
             }
