@@ -239,37 +239,42 @@ body {
       height: 90vh;
       background-color: @DarkGreen;
 
-      .text-about-us {
+      .about-us-content {
         .center();
-        width: 35%;
-        height: 60%;
+        width: 70%;
+        height: 100%;
 
-        article {
-          width: 90%;
+        .text-about-us {
+          .center();
+          width: 50%;
+          height: 60%;
 
-          h1 {
-            font-size: @Title;
-            color: @LightGray;
-            margin-bottom: 32px;
-          }
+          article {
+            width: 90%;
 
-          p {
-            color: @LightGray;
-            font-size: @Paragraph_G;
+            h1 {
+              font-size: @Title;
+              color: @LightGray;
+              margin-bottom: 32px;
+            }
+
+            p {
+              color: @LightGray;
+              font-size: @Paragraph_G;
+            }
           }
         }
-      }
 
-      .img-about-us {
-        width: 35%;
-        height: 80%;
+        .img-about-us {
+          width: 50%;
+          height: 80%;
+          display: flex;
+          justify-content: end;
 
-        display: flex;
-        justify-content: end;
-
-        img {
-          width: 70%;
-          height: 100%;
+          img {
+            width: 70%;
+            height: 100%;
+          }
         }
       }
     }
@@ -998,42 +1003,19 @@ body {
       }
 
       .about-us {
-        .center();
-        width: 100%;
-        height: 90vh;
-        background-color: @DarkGreen;
+        .about-us-content {
+          .text-about-us {
+            article {
+              h1 {
+                font-size: @Title_M;
+                color: @LightGray;
+              }
 
-        .text-about-us {
-          .center();
-          width: 35%;
-          height: 60%;
-
-          article {
-            width: 90%;
-
-            h1 {
-              font-size: @Title;
-              color: @LightGray;
-              margin-bottom: 32px;
+              p {
+                color: @LightGray;
+                font-size: @Paragraph_M;
+              }
             }
-
-            p {
-              color: @LightGray;
-              font-size: @Paragraph_G;
-            }
-          }
-        }
-
-        .img-about-us {
-          width: 35%;
-          height: 80%;
-
-          display: flex;
-          justify-content: end;
-
-          img {
-            width: 70%;
-            height: 100%;
           }
         }
       }
