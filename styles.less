@@ -19,6 +19,7 @@
 @Paragraph_M: 18px;
 @Title: 50px;
 @Title_M: 35px;
+@SubTitle_M: 22px;
 @Button_M: 20px;
 
 //Mixins
@@ -605,7 +606,7 @@ body {
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-              width: 80%;
+              width: 90%;
               height: 70%;
 
               .group-input {
@@ -1109,93 +1110,22 @@ body {
       }
 
       .faq {
-        .center();
-        width: 100%;
-        height: 100vh;
-        background-color: @DarkGreen;
-
         .faq-content {
-          .center();
-          width: 70%;
-          height: 100%;
-
           .faq-text {
-            .center();
-            width: 50%;
-            height: 100%;
-
             h1 {
-              font-size: @Title;
-              color: @LightGray;
+              font-size: @Title_M;
             }
 
             p {
-              width: 80%;
-              margin: 16px 0;
-              font-size: @Paragraph_G;
-              color: @LightGray;
+              font-size: @Paragraph_M;
             }
           }
 
           .faq-questions {
-            .center_column();
-            width: 50%;
-            height: 80%;
-
             .question {
-              &:nth-child(2) {
-                margin: 32px 0;
-              }
-
               .question-content {
-                .between();
-                height: 50px;
-                padding: 16px;
-                background-color: @SaturedGreen;
-                cursor: pointer;
-
                 p {
-                  color: @LightGray;
-                  font-size: 18px;
-                  margin-right: 8px;
-                }
-
-                .down {
-                  color: @LightGray;
-                  transform: rotate(0deg);
-                  transition: transform 0.5s;
-
-                  &.active {
-                    transform: rotate(180deg);
-                    transition: transform 0.5s;
-                  }
-                }
-              }
-
-              .answer {
-                height: 0;
-                transition: height 0.3s;
-                color: @LightGray;
-                font-size: 16px;
-                background-color: @SaturedGreen;
-                overflow: auto;
-
-                p {
-                  visibility: hidden;
-                  opacity: 0;
-                  transition: opacity 0.5s, visibility 0.5s;
-                }
-
-                &.active {
-                  height: 100px;
-                  transition: height 0.3s;
-                  padding: 16px;
-
-                  p {
-                    visibility: visible;
-                    opacity: 1;
-                    transition: opacity 0.5s, visibility 0.5s;
-                  }
+                  font-size: 16px;
                 }
               }
             }
@@ -1204,141 +1134,91 @@ body {
       }
 
       .contacts {
-        .center();
-        width: 100%;
-        height: 80vh;
-        background-color: @LightGray;
-
         .contacts-content {
           .center_column();
           width: 70%;
           height: 100%;
 
           h1 {
-            font-size: @Title;
-            margin: 32px 0;
+            font-size: @Title_M;
+            margin: 0;
           }
 
           .group-form-text {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            height: 65%;
-
+            margin-top: 32px;
             .form {
-              width: 30%;
-              max-width: 400px;
-              height: 100%;
-              padding: 32px;
-              text-align: center;
-              background-color: @SaturedGreen;
+              padding: 16px 16px;
 
               h2 {
-                margin: 32px 0;
-                color: @LightGray;
-                font-size: 30px;
+                margin: 8px 0;
+                font-size: @SubTitle_M;
               }
 
               form {
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 80%;
-                height: 70%;
+                width: 90%;
+                height: 80%;
 
                 .group-input {
-                  width: 100%;
-                  margin-top: 16px;
-
                   input {
-                    width: 100%;
-                    height: 50px;
-                    padding: 8px;
-                    border: none;
+                    height: 35px;
+                    font-size: 15px;
 
                     &::placeholder {
-                      font-size: 16px;
+                      font-size: 15px;
                     }
                   }
 
                   select {
-                    width: 100%;
-                    height: 50px;
-                    margin: 8px 0;
-                    padding: 8px;
-                    border: none;
-                    font-size: 16px;
+                    height: 35px;
+                    font-size: 15px;
                   }
 
                   .check-discard {
-                    .center();
-                    margin: 32px 0;
+                    margin: 16px 0;
 
                     input {
-                      width: 20px;
-                      height: 20px;
-                      cursor: pointer;
+                      width: 16px;
+                      height: 16px;
                     }
 
                     label {
-                      margin: 0 8px;
-                      color: @LightGray;
-                      font-size: @Paragraph_G;
-                      cursor: pointer;
+                      margin: 0 4px;
+                      font-size: 16px;
                     }
 
                     abbr {
-                      .center();
-
                       img {
-                        width: 22px;
-                        height: 22px;
+                        width: 16px;
+                        height: 16px;
                       }
                     }
                   }
                 }
 
                 .form-button {
-                  width: 50%;
-                  height: 50px;
-                  margin: 0 auto;
-                  border: none;
-                  font-size: 18px;
-                  font-weight: bold;
-                  cursor: pointer;
-
-                  &:hover {
-                    background-color: #fff;
-                  }
+                  height: 40px;
+                  font-size: 16px;
                 }
               }
             }
 
             .text-contact {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              width: 40%;
-              height: 100%;
-
               article {
-                width: 90%;
-
                 h2 {
-                  font-size: 30px;
+                  font-size: @SubTitle_M;
                 }
 
                 p {
-                  font-size: @Paragraph_G;
+                  font-size: @Paragraph_M;
                 }
               }
 
               .group-icons {
-                margin: 32px 0;
+                margin: 16px 0;
 
                 img {
-                  margin: 0 4px;
+                  width: 24px;
+                  height: 24px;
                 }
               }
             }
