@@ -33,7 +33,7 @@ const request_budget = () => {
   
   let name_client = document.querySelector("#name-client").value
   let service_select = document.querySelector("#service-select").value
-  let number_phone = "5531983531055"
+  let number_phone = "5531992108925"
   let checkbox_discard = document.querySelector("#discard")
   let checkbox_value = checkbox_discard.checked
   let message = encodeURIComponent(`Olá, meu nome é ${name_client}. Gostaria de solicitar um orçamento. \n*Serviço a ser realizado*: ${service_select} \n*Descarte dos resíduos*: ${checkbox_value === true? "Sim" : "Não"}`)
