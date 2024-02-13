@@ -2092,31 +2092,26 @@ body {
       }
 
       .faq {
-        .center();
-        width: 100%;
-        height: 100vh;
-        background-color: @DarkGreen;
+        height: fit-content;
+        padding: 32px 0;
 
         .faq-content {
-          .center();
-          width: 70%;
-          height: 100%;
+          .center_column();
+          width: 80%;
 
           .faq-text {
             .center();
-            width: 50%;
-            height: 100%;
+            width: 100%;
+            margin: 0 0 32px 0;
+            text-align: center;
 
             h1 {
-              font-size: @Title;
-              color: @LightGray;
+              font-size: 30px;
             }
 
             p {
-              width: 80%;
-              margin: 16px 0;
-              font-size: @Paragraph_G;
-              color: @LightGray;
+              margin: 16px auto;
+              font-size: @Paragraph16;
             }
           }
 
@@ -2140,7 +2135,7 @@ body {
 
                 p {
                   color: @LightGray;
-                  font-size: 18px;
+                  font-size: @Paragraph16;
                   margin-right: 8px;
                 }
 
