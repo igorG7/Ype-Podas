@@ -2279,44 +2279,37 @@ body {
       }
 
       footer {
-        width: 100%;
-        height: 70vh;
+        height: 150vh;
 
         .content-footer {
-          .center();
-          width: 100%;
-          height: 90%;
-          background-image: url("img/BANNER_ORÇAMENTOS-2.png");
-          background-size: cover;
+          .center_column();
+          padding: 32px 0;
 
           .about-us-footer {
-            width: 20%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            padding: 16px 0;
+            width: 60%;
+            height: 50%;
+            align-items: center;
+            padding: 0;
 
             img {
-              width: 140px;
-              height: 90px;
+              width: 100px;
+              height: 80px;
             }
 
             article {
+              text-align: center;
+              margin: 8px 0;
+
               p {
-                color: @LightGray;
-                margin: 8px 0;
+                font-size: 12px;
               }
             }
 
             .contacts-icons {
-              display: flex;
-
               a {
                 img {
-                  margin: 0 4px;
-                  width: 32px;
-                  height: 32px;
+                  width: 22px;
+                  height: 22px;
                 }
               }
             }
@@ -2324,46 +2317,29 @@ body {
 
           .services-footer {
             .center();
-            width: 20%;
-            height: 100%;
-            margin: 0 32px;
+            width: 60%;
+            height: 50%;
+            margin: 0;
 
             ul {
               width: fit-content;
+              text-align: center;
 
               li {
                 margin: 16px 0;
-                list-style: none;
-                color: @LightGray;
               }
             }
           }
 
           .nav-footer {
-            .center();
-            width: 20%;
-            height: 100%;
+            width: 80%;
+            height: 50%;
 
             nav {
-              width: fit-content;
-
-              span {
-                color: @LightGray;
-              }
+              text-align: center;
 
               ul {
-                width: fit-content;
-                margin: 0 18px;
-
-                li {
-                  color: @LightGray;
-                  margin: 16px 0;
-
-                  a {
-                    text-decoration: none;
-                    color: @LightGray;
-                  }
-                }
+                list-style: none;
               }
             }
           }
