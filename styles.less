@@ -2368,7 +2368,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                font-size: 14px;
+                font-size: @Paragraph_P;
               }
 
               &:nth-child(7) {
@@ -2380,7 +2380,7 @@ body {
       }
 
       .banner {
-        height: 200vh;
+        height: 150vh;
 
         .banner-logo {
           .center_column();
@@ -2388,57 +2388,35 @@ body {
           height: 100%;
 
           .logo-presentation {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-direction: column;
             width: 100%;
-            height: 80%;
-            padding: 0;
-            margin: 0;
+            height: 100%;
 
             .logo-img {
-              width: 100%;
-              margin: 0;
-              display: flex;
-              justify-content: center;
-
               img {
-                width: 200px;
-                max-width: 200px;
+                width: 160px;
               }
             }
 
             .text-presentation {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-
               h1 {
                 margin: 0 0 16px 0;
-                font-size: 22px;
-                text-align: justify;
-                width: 70%;
+                font-size: 18px;
+                text-align: center;
+                width: 100%;
               }
 
               p {
-                width: 70%;
-                text-align: justify;
-                font-size: @Paragraph16;
+                width: 100%;
+                text-align: center;
+                font-size: @Paragraph_P;
               }
 
               button {
-                width: 70%;
-                height: 40px;
-                margin: 16px 0 0 0;
-                border: none;
-                background-color: @Green;
-                cursor: pointer;
+                width: 100%;
+                margin: 32px 0 0;
 
                 a {
-                  color: @LightGray;
-                  font-size: 18px;
-                  text-decoration: none;
+                  font-size: 16px;
                 }
 
                 &:hover {
@@ -2451,7 +2429,7 @@ body {
           .banner-img {
             .center();
             width: 100%;
-            height: 80%;
+            height: 50%;
 
             img {
               width: 100%;
