@@ -2556,12 +2556,29 @@ body {
             text-align: center;
 
             h1 {
-              font-size: 30px;
+              font-size: 26px;
             }
 
             p {
-              margin: 16px auto;
-              font-size: @Paragraph16;
+              width: 100%;
+              margin: 16px 0;
+              font-size: @Paragraph_P;
+            }
+          }
+
+          .faq-questions {
+            width: 100%;
+
+            .question {
+              .question-content {
+                min-width: 300px;
+                padding: 8px;
+
+                p {
+                  font-size: @Paragraph_P;
+                  margin-right: 0;
+                }
+              }
             }
           }
         }
