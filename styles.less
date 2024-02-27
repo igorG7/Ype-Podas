@@ -758,6 +758,7 @@ body {
               position: absolute;
               transition: all 0.3s ease-in-out;
               width: 30%;
+              max-width: 495px;
               border: 2px solid @LightGray;
             }
 
@@ -2639,35 +2640,19 @@ body {
           height: 100%;
 
           h1 {
-            font-size: 30px;
+            font-size: 26px;
           }
 
           article {
-            width: 80%;
-            font-size: @Paragraph16;
+            width: 100%;
+            font-size: @Paragraph_P;
             margin: 16px 0;
           }
 
           .carousel {
-            .carousel-container {
-              width: 90%;
-
-              .carousel-item {
-                min-width: 160px;
-              }
-            }
-
             .carousel-controls {
-              z-index: 500;
-
-              .carousel-controls-previous {
-                width: 40px;
-                height: 40px;
-              }
-
-              .carousel-controls-next {
-                width: 40px;
-                height: 40px;
+              button {
+                margin: 0;
               }
             }
           }
