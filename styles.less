@@ -403,10 +403,46 @@ body {
       }
     }
 
-    .quote-call-ii {
+    .acting {
+      .center();
       width: 100%;
-      height: 951px;
-      background-color: red;
+      height: 100vh;
+      background-image: url("img/BANNER_ORÇAMENTOS-2.png");
+
+      .acting-content {
+        display: flex;
+        width: 70%;
+        height: 100%;
+
+        .acting-text {
+          .center();
+          width: 50%;
+          position: relative;
+
+          article {
+            color: @LightGray;
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              font-size: @Paragraph_G;
+              margin: 16px 0;
+              width: 80%;
+            }
+          }
+        }
+
+        .acting-map {
+          .center();
+          width: 50%;
+
+          .map {
+            border: 2px solid @LightGray;
+            z-index: 2;
+          }
+        }
+      }
     }
 
     .benefits {
