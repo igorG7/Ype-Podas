@@ -2113,10 +2113,39 @@ body {
         }
       }
 
-      .quote-call-ii {
-        width: 100%;
-        height: 951px;
-        background-color: red;
+      .acting {
+        height: fit-content;
+        padding: 32px 0;
+
+        .acting-content {
+          .center_column();
+          width: 80%;
+
+          .acting-text {
+            margin-bottom: 32px;
+
+            article {
+              text-align: center;
+              h1 {
+                font-size: 30px;
+                margin-bottom: 32px;
+              }
+
+              p {
+                font-size: @Paragraph16;
+                width: 100%;
+                margin: 0;
+              }
+            }
+          }
+
+          .acting-map {
+            .map {
+              height: 300px;
+              width: 300px;
+            }
+          }
+        }
       }
 
       .benefits {
